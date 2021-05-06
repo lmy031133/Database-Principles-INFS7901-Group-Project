@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block head %}
+<div id="jumbotron_id" class="jumbotron">
+    <h1>CART!</h1>
+    <p>Find your session</p>
+
+        <form method="POST" action="">
+            <!-- <div class="content-section"> -->
+            <div class="dropdown">
+                <div class="row">
+                    <div class="col-md-12">
+                        <select name="Occupation" class="btn btn-light dropdown-toggle">
+                            <option value="" disabled selected>Occupation</option>
+                            <option value="1">Doctor</option>
+                            <option value="2">Nurse</option>
+                            <option value="3">Pharmacist</option>
+
+                        </select>
+                        <select name="Topic" class="btn btn-light dropdown-toggle">
+                            <option value="" disabled selected>Topic</option>
+                            <option value="1">Topic1</option>
+                            <option value="2">Topic2</option>
+                            <option value="3">Topic3</option>
+
+                        </select>
+                        <select name="Postid" class="btn btn-light dropdown-toggle">
+                            <option value="" disabled selected>Postid</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <input type="submit" value="Search" class="btn btn-info">
+                    </div>
+                    <!-- <div class="col-md-4">
+                    </div> -->
+                </div>
+            </div>
+            <!-- </div> -->
+        </form>
+    </p>
+</div>
+ {% endblock %}

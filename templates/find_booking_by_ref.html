@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block head %}
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Login as</h1>
+  <a href="/educator">
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Educator</button>
+  </a>
+  <a href="/student">
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Student</button>
+  </a>
+</header>
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Forgot your booking details?</h1>
+  <a href="/find_booking">
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Click here</button>
+  </a>
+</header>
+{% endblock %}
+{% block content %}
+    <body>
+        <h1><center>Your AHPRA Registration Number or your Booking Number:</center></h1>
+        <form class="find_booking" method="post" action="">
+<!--         style="margin:auto;max-width:0px">-->
+            <center><input type="text" placeholder="Search by Booking or AHPRA Registration Number" name="booknum" size="50"></center>
+            <br>
+            <center><button type="submit">Search!</button></center>
+        </form>
+        <p></p>
+        {% for item in data %}
+        <table style="margin:auto">
+            <tr>
+                <th>Date:</th>
+                <td>{{item[0]}}</td>
+            </tr>
+            <tr>
+                <th>Time:</th>
+                    <td>{{item[1]}}</td>
+            </tr>
+            <tr>
+                <th>Duration:</th>
+                    <td>{{item[2]}}</td>
+            </tr>
+            <tr>
+                <th>Delivery Method:</th>
+                    <td>{{item[3]}}</td>
+            </tr>
+        </table>
+        {% endfor %}
+        </center>
+    </body>
+{% endblock %}
