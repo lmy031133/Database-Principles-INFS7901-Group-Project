@@ -1,1 +1,1 @@
-# INFS7901_test
+# INFS7901 Group Project
